@@ -7,16 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
-var app_component_1 = require("./app.component");
-var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
 var http_1 = require("@angular/common/http");
 var forms_1 = require("@angular/forms");
-var answer_question_component_1 = require("./answer-question/answer-question.component");
+var app_component_1 = require("./app.component");
 var storage_service_1 = require("./storage.service");
-var appRoutes = [
-    { path: 'ask', component: answer_question_component_1.AnswerQuestionComponent }
-];
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,11 +21,13 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         declarations: [
-            app_component_1.AppComponent,
-            answer_question_component_1.AnswerQuestionComponent
+            app_component_1.AppComponent
         ],
         imports: [
-            platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            forms_1.ReactiveFormsModule,
+            http_1.HttpClientModule
         ],
         providers: [storage_service_1.StorageService],
         bootstrap: [app_component_1.AppComponent]
