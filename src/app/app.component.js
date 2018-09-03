@@ -14,21 +14,17 @@ var AppComponent = (function () {
         this.title = 'app';
         this.model = new question_1.Question("");
         this.answerList = ["Yes.", "No.", "Maybe...", "Absolutely Not!", "Definitely!", "Ask Again Later."];
-        this.answer = "";
-        this.hideAnswer = true;
     }
     AppComponent.prototype.onSubmit = function () {
         var storage = new storage_service_1.StorageService();
-        console.log(this.model.question);
         var answer = storage.getQuestion(this.model.question)
         if(answer == null) {
-            console.log("No answer yet");
             var newAnswer = Math.floor(Math.random() * 6);
             storage.addQuestion(this.model.question, this.answerList[newAnswer]);
             console.log(storage.getQuestion(this.model.question));
         }
 
-        this.answer = storage.getQuestion(this.model.question);
+        this.model.answer = storage.getQuestion(this.model.question);
     };    
     return AppComponent;
 }());

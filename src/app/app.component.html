@@ -9,12 +9,16 @@
             [(ngModel)] = 'model.question' name = 'question'>
       </div>
       <br>
-      <button type='submit' class='btn btn-success' [disabled]='questionForm.invalid'>Add</button>
+      <button type='submit' class='btn btn-success'>Add</button>
 
    </form>
-
-  <div ng-hide="hideAnswer" class="ng-hide">Hello</div>
-
+   <br>
+   <br>
+    <div class = 'form-group'>
+       <label for = 'question'>Answer :</label>
+       <input type = 'text' class = 'form-control' id = 'answer' required
+          [(ngModel)] = 'model.answer' name = 'answer'>
+    </div>
 </div>
 
 

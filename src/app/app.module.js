@@ -7,12 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var http_1 = require("@angular/common/http");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
-var storage_service_1 = require("./storage.service");
-
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,11 +21,9 @@ AppModule = __decorate([
         ],
         imports: [
             platform_browser_1.BrowserModule,
-            forms_1.FormsModule,
-            forms_1.ReactiveFormsModule,
-            http_1.HttpClientModule
+            forms_1.FormsModule, forms_1.ReactiveFormsModule
         ],
-        providers: [storage_service_1.StorageService],
+        providers: [],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
