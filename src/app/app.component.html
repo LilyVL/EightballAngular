@@ -1,0 +1,17 @@
+<div class = 'container'>
+   <h1>Ask me anything!</h1>
+
+   <form (ngSubmit)='onSubmit()' #productForm='ngForm'>
+
+      <div class = 'form-group'>
+         <label for = 'question'>Question :</label>
+         <input type = 'text' class = 'form-control' id = 'question' required
+            [(ngModel)] = 'model.question' name = 'question'>
+      </div>
+
+      {{ productForm.value | json }}
+
+   </form>
+</div>
+
+
